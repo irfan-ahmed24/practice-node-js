@@ -1,5 +1,16 @@
 const fs=require("fs");
 
+//read file
+
+fs.readFileSync("demo1.txt","utf-8",(data,err)=>{
+    if(err){
+        console.log(err)
+    }
+    else{
+        console.log(data)
+    }
+})
+
 
 //file data will be overwrite
 
@@ -15,14 +26,14 @@ const fs=require("fs");
 
 //file data will be add after the previous data
 
-fs.appendFile("demo1.txt",". i am 22 years old",(err)=>{
-    if(err){
-        console.log(err)
-    }
-    else{
-        console.log("successfull")
-    }
-})
+// fs.appendFile("demo1.txt",". i am 22 years old",(err)=>{
+//     if(err){
+//         console.log(err)
+//     }
+//     else{
+//         console.log("successfull")
+//     }
+// })
 
 //rename file 
 
